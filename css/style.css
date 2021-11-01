@@ -66,6 +66,10 @@ img.cloud_below {
   padding: 0;
 }
 
+.col-lg-3 {
+  padding: 0;
+}
+
 .active_menu {
   opacity: 0;
   transform: translateY(5px);
@@ -76,6 +80,27 @@ img.cloud_below {
   max-width: 1075px;
   margin: auto;
   height: 100%;
+  padding: 0 5px;
+}
+
+.slick-prev:before {
+  content: "\f053" !important;
+  font-family: "Font Awesome 5 Pro" !important;
+  position: absolute;
+  padding: 5px 10px;
+  left: -65%;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.slick-next:before {
+  content: "\f054" !important;
+  font-family: "Font Awesome 5 Pro" !important;
+  position: absolute;
+  padding: 5px 10px;
+  left: 0;
+  border: 1px solid white;
+  border-radius: 50%;
 }
 
 #header {
@@ -286,38 +311,42 @@ img.cloud_below {
 #job_categories .list_job {
   margin: 27px 0;
 }
-#job_categories .list_job .one_job {
-  padding: 10px;
-  border: 1px solid lightgray;
-  margin-right: 26px;
-  width: 23.1%;
-  margin-bottom: 28px;
+#job_categories .list_job .row {
+  margin-bottom: 10px;
 }
-#job_categories .list_job .one_job .left {
+#job_categories .list_job .row .one_job {
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+#job_categories .list_job .row .one_job .one_job_content {
+  border: 1px solid #d4d4d4;
+  padding: 5px;
+}
+#job_categories .list_job .row .one_job .left {
   width: 30%;
   overflow: hidden;
 }
-#job_categories .list_job .one_job .right a {
+#job_categories .list_job .row .one_job .right a {
   display: block;
   padding-bottom: 10px;
   text-decoration: none;
 }
-#job_categories .list_job .one_job .right a.cat_title {
+#job_categories .list_job .row .one_job .right a.cat_title {
   font-weight: bold;
   font-size: 15px;
   margin-top: 5px;
   color: black;
 }
-#job_categories .list_job .one_job .right a.job_title {
+#job_categories .list_job .row .one_job .right a.job_title {
   color: gray;
 }
-#job_categories .list_job .one_job .right a.job_title i {
+#job_categories .list_job .row .one_job .right a.job_title i {
   padding: 2px 3px;
 }
-#job_categories .list_job .one_job:nth-last-child(4n+1) {
-  margin-right: 0;
+#job_categories .list_job .row .one_job:nth-last-child(4n+1) {
+  padding-right: 0;
 }
-#job_categories .list_job .view_all_jobs a {
+#job_categories .list_job .row .view_all_jobs a {
   background: #FC4349;
   border: none;
   margin-bottom: 100px;
@@ -328,14 +357,17 @@ img.cloud_below {
   height: 580px;
   width: 100%;
 }
+#feature .wrap_content {
+  padding: 0;
+}
 #feature h3.feature_title {
   padding: 80px 0 20px 0;
   font-weight: 600;
   color: white;
 }
 #feature .feature_one {
-  margin-right: 10px;
-  margin-left: 10px;
+  /* the slides */
+  margin: 0 5px;
   position: relative;
   background: white;
 }
@@ -420,11 +452,10 @@ img.cloud_below {
   width: 10%;
 }
 #feed .news .col-lg-6 {
-  width: 48.6%;
-  margin-right: 30px;
+  padding-right: 30px;
 }
 #feed .news .col-lg-6:nth-child(2n) {
-  margin-right: 0;
+  padding-right: 0;
 }
 #feed .news .content_news {
   border: 1px solid lightgray;
@@ -712,7 +743,7 @@ img.cloud_below {
 
   #feed .news .col-lg-6 {
     width: 100%;
-    margin: 0;
+    padding-right: 0;
   }
   #feed .right {
     padding: 10px 0;
@@ -726,12 +757,15 @@ img.cloud_below {
     margin-bottom: 5%;
     height: auto;
   }
-  #job_categories .list_job .one_job {
-    width: 100%;
+  #job_categories .list_job .one_job:nth-child(1n) {
+    padding-right: 0;
   }
 
   #feature .feature_one {
     margin: 0;
+  }
+  #feature .wrap_content {
+    padding: 0 10px;
   }
 
   #feed .news .content_news {
@@ -759,7 +793,7 @@ img.cloud_below {
     left: 41%;
   }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .wrap_content {
     padding: 0 10px;
   }
@@ -825,6 +859,7 @@ img.cloud_below {
   #feed .news .col-lg-6 {
     width: 100%;
     margin: 0;
+    padding-right: 0;
   }
   #feed .right {
     padding: 10px 0;
@@ -837,13 +872,13 @@ img.cloud_below {
     width: 100%;
     margin-bottom: 5%;
   }
-  #job_categories .list_job .one_job {
-    width: 48.2%;
-  }
   #job_categories .list_job .one_job:nth-child(2n) {
-    margin-right: 0;
+    padding-right: 0;
   }
 
+  #feature .wrap_content {
+    padding: 0 10px;
+  }
   #feature .feature_one {
     margin-right: 20px;
   }
